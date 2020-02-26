@@ -278,6 +278,7 @@ tr > th {
 	border-radius: 5px;
 	border: 0;
 	display: block;
+	z-index: 1;
 	margin-top: 18px;
 }
 button:not(.no-hover):hover {

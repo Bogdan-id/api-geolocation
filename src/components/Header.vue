@@ -63,6 +63,7 @@ export default {
 
 <style scoped>
 header {
+	z-index: 2000;
 	position: fixed;
 	width: 100%;
 	height: 48px;
@@ -74,6 +75,7 @@ header {
 	height: 100%;
 	display: flex;
 	color: #FFFFFF;
+	z-index: 3000;
 	background: #656BF2;
 }
 .header_sec {
