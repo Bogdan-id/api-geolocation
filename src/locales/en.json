@@ -1,0 +1,20 @@
+{
+	"title": {
+		"lang": "en",
+		"ip": "IP address",
+		"result": "Result",
+		"history": "History"
+	},
+	"button": {
+		"getInfo": "Get information",
+		"clearHistory": "Clear history"
+	},
+	"table": {
+		"ip": "IP address",
+		"continent": "Continent/code",
+		"country": "Country/code",
+		"city": "City",
+		"postal": "Postcode",
+		"coordinates": "Coordinates"
+	}
+}
