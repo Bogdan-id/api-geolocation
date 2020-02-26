@@ -24,7 +24,7 @@
 			<div class="section-result">
 				<span class="table-title">{{ $t('title.result') }}</span>
 				<div class="table-wrapper">
-					<table>
+					<table width="1074">
 						<thead>
 							<tr>
 								<th>{{ $t('table.ip') }}</th>
@@ -161,14 +161,17 @@ export default {
 			return this.toggleLang ? 'ru' : 'en'
 		},
 		createObject(v) {
-			let t = (val) => val !== null
+			// test value
+			let t = (val) => val !== null 
+			// round value
+			let r = (val) => Math.round(val * 100) / 100
 			return {
 				'ip': v.ip,
 				'continent': `${t(v.continentName) ? v.continentName + '/' + v.continentCode : '--'}`,
 				'country': `${t(v.countryName) ? v.countryName + '/' + v.countryCode : '--'}`,
 				'city': `${t(v.city) ? v.city : '--'}`,
 				'postCode': `${t(v.postCode) ? v.postCode : '--'}`,
-				'coordinates': `${t(v.latitude) ? v.latitude + '/' + v.longitude : '--'}`
+				'coordinates': `${t(v.latitude) ? r(v.latitude) + ' / ' + r(v.longitude) : '--'}`
 			}
 		},
 		chooseArrLang(val) {
@@ -220,11 +223,13 @@ section {
 .form-wrapper {
 	margin: 0 48px 0 48px;
 	padding: 1px 0 48px 0;
+	display: block;
 }
 
 /* Table */
 table { 
-	border-collapse: collapse; 
+	border-collapse: collapse;
+	table-layout: fixed;
 }
 .table-title {
 	font-family: Open Sans;
@@ -243,7 +248,6 @@ tr > td {
 	padding: 20px 40px;
 	border: 1px solid #CCCCCC;
 	color: #969696;
-	overflow: auto;
 }
 tr > th {
 	text-align: center;
@@ -257,9 +261,7 @@ tr > th {
 	color: #FFFFFF;
 }
 .section-result {
-	display: flex;
-	flex-wrap: wrap;
-
+	display: inline-block;
 }
 
 /* Button */
