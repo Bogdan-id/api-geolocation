@@ -256,7 +256,7 @@ tr > th {
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 16px;
 	color: #FFFFFF;
 }
